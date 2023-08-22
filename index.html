@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> simple-calculator </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class = "heading">
+        <h1>calulator</h1>
+    </div>
+    <div class = "home">
+        <div class = "calculator">
+            
+            <form class = "form">
+                
+                <div class = "view-part">
+                    <input type="text" name = "view-part">
+                </div>
+                <div>
+                    <input class = "clear" type="button" value = "AC" onclick="document.querySelector('.view-part input').value = '' ">
+                    <input class = "clear" type="button" value = "DE" onclick="document.querySelector('.view-part input').value = document.querySelector('.view-part input').value.toString().slice(0 , -1) ">
+                    <input class = "operation" type="button" value = "." onclick="document.querySelector('.view-part input').value += '.' ">
+                    <input class = "operation" type="button" value = "/" onclick="document.querySelector('.view-part input').value += '/' ">
+                </div>
+                <div>
+                    <input type="button" value = "7" onclick="document.querySelector('.view-part input').value += '7' "> >
+                    <input type="button" value = "8" onclick="document.querySelector('.view-part input').value += '8' ">
+                    <input type="button" value = "9" onclick="document.querySelector('.view-part input').value += '9' ">
+                    <input class = "operation" type="button" value = "*" onclick="document.querySelector('.view-part input').value += '*' ">
+                </div>
+                <div>
+                    <input type="button" value = "4" onclick="document.querySelector('.view-part input').value += '4' ">
+                    <input type="button" value = "5" onclick="document.querySelector('.view-part input').value += '5' ">
+                    <input type="button" value = "6" onclick="document.querySelector('.view-part input').value += '6' ">
+                    <input class = "operation" type="button" value = "-" onclick="document.querySelector('.view-part input').value += '-' ">
+                </div>
+                <div>
+                    <input type="button" value = "1" onclick="document.querySelector('.view-part input').value += '1' ">
+                    <input type="button" value = "2" onclick="document.querySelector('.view-part input').value += '2' ">
+                    <input type="button" value = "3" onclick="document.querySelector('.view-part input').value += '3' ">
+                    <input class = "operation" type="button" value = "+" onclick="document.querySelector('.view-part input').value += '+' ">
+                </div>
+                <div>
+                    <input type="button" value = "0" onclick="document.querySelector('.view-part input').value += '0' ">
+                    <input type="button" value = "(" onclick="document.querySelector('.view-part input').value += '(' ">
+                    <input type="button" value = ")" onclick="document.querySelector('.view-part input').value += ')' ">
+                    
+                    <input class="equal-to" type="button" value="=" onclick="document.querySelector('.view-part input').value = eval(document.querySelector('.view-part input').value)">
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+</body>
+</html>
